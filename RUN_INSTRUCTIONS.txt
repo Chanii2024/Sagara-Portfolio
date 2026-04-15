@@ -4,8 +4,7 @@ Follow these steps to get the portfolio up and running smoothly:
 
 1. INITIAL SETUP:
    Ensure you have Node.js and MongoDB installed on your system.
-   Open your terminal in the project root:
-   c:\Work - Chanii\Projects\Sagara-Portfolio
+   Open your terminal in the project root folder.
 
 2. INSTALL DEPENDENCIES:
    If this is the first time running the project, run:
