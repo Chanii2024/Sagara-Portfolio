@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Sagara Lakmal De Mel - Renowned Photojournalist, Director, and former Official Photographer to the President of Sri Lanka.">
+    <meta name="keywords"
+        content="Sagara Lakmal De Mel, Photographer, Sri Lanka, Presidential Photographer, Media Ambassadors, Photojournalist">
+    <meta property="og:title" content="Sagara Lakmal De Mel | Visual Masterpiece">
+    <meta property="og:description"
+        content="Capturing history through the lens. The official portfolio of Sagara Lakmal De Mel.">
+    <meta property="og:image" content="https://example.com/sagara-cover.jpg">
+    <!-- Placeholder for eventual real image -->
+    <title>Sagara Lakmal De Mel | Renowned Photographer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon (Emoji for now) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header" id="main-header">
+        <div class="container header-content">
+            <a href="#" class="logo">SAGARA LAKMAL</a>
+            <nav class="nav-desktop">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#section-sequence">Journey</a>
+                <a href="gallery.html">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <nav class="nav-mobile">
+            <a href="#hero" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#section-sequence" class="mobile-link">Journey</a>
+            <a href="gallery.html" class="mobile-link">Portfolio</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <h2 class="loader-text">Loading Gallery</h2>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <p class="loader-count">0%</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Section 1: Hero -->
+        <section class="section hero" id="hero">
+            <div class="hero-bg">
+                <!-- Abstract Cinematic Background -->
+                <div class="spotlight"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="reveal-text">Sagara Lakmal De Mel</h1>
+                <p class="subtitle reveal-text">Photojournalist | Director | Visual Artist</p>
+                <div class="hero-signature">Official Photographer to the President (Fmr)</div>
+            </div>
+
+            <a href="#about" class="scroll-indicator">
+                <span>The Journey</span>
+                <div class="line"></div>
+            </a>
+        </section>
+
+        <!-- Section 2: About / The Man Behind the Lens -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="about-grid with-image">
+                    <div class="about-image">
+                        <img src="SagaraPP.webp" alt="Sagara Lakmal De Mel" class="profile-pic">
+                    </div>
+                    <div class="about-text glass-panel">
+                        <h2 class="section-title">The Master's Eye</h2>
+                        <h3 class="tagline">Icon of the Year in Photography (2018)</h3>
+                        <p class="lead">A classical guitarist turned visual virtuoso, Sagara Lakmal De Mel brings a
+                            musician's rhythm to the art of photography.</p>
+                        <p>Honored with the <strong>Nelson Mandela Peace Award (2019)</strong> and recognized as a
+                            <strong>Global Achiever</strong>, he has served as the Chief Official Photographer for the
+                            President of Sri Lanka. From the <strong>Sydney Opera House</strong> to the
+                            <strong>Vatican's Papal Visit</strong>, his work transcends borders.
+                        </p>
+
+                        <div class="social-text-links">
+                            <a href="#">Wikipedia</a> . <a href="#">Facebook</a> . <a href="#">Instagram</a> . <a
+                                href="#">LinkedIn</a>
+                        </div>
+
+                        <div class="stats-row">
+                            <div class="award-item">
+                                <span class="stat-num">2019</span>
+                                <span class="stat-label">Nelson Mandela Peace Award</span>
+                            </div>
+                            <div class="award-item">
+                                <span class="stat-num">2018</span>
+                                <span class="stat-label">Icon of The Year (USA)</span>
+                            </div>
+                            <div class="award-item">
+                                <span class="stat-num">Judge</span>
+                                <span class="stat-label">State TV Awards</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Animation (Scroll Locked) -->
+        <section class="section scroll-sequence" id="section-sequence">
+            <div class="canvas-container">
+                <canvas id="sequence-canvas"></canvas>
+            </div>
+            <div class="sequence-overlay">
+                <h2 class="sequence-text">A Legacy in Focus</h2>
+            </div>
+        </section>
+
+        <!-- Section 4: Gallery (Scroll-Locked Stack) -->
+        <section class="section gallery" id="gallery">
+            <div class="container">
+                <div class="gallery-wrapper">
+                    <div class="section-header center" style="margin-bottom: 4vh;">
+                        <h2 class="section-title">Portfolio Highlights</h2>
+                        <p class="section-subtitle">A Visual Journey</p>
+                    </div>
+
+                    <div class="gallery-deck">
+                        <!-- Card 1 -->
+                        <div class="deck-card">
+                            <img src="https://images.unsplash.com/photo-1541872703-74c59636a2fd?q=80&w=1000&auto=format&fit=crop"
+                                alt="Presidential">
+                            <div class="card-info">
+                                <h3>Presidential</h3>
+                                <p>Official State Coverage</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="deck-card">
+                            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1000&auto=format&fit=crop"
+                                alt="Concerts">
+                            <div class="card-info">
+                                <h3>Concerts</h3>
+                                <p>Live Performance</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="deck-card">
+                            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop"
+                                alt="Portrait">
+                            <div class="card-info">
+                                <h3>Portrait</h3>
+                                <p>The Human Spirit</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="deck-card">
+                            <img src="https://images.unsplash.com/photo-1481026469463-66327cbbd31b?q=80&w=1000&auto=format&fit=crop"
+                                alt="Architecture">
+                            <div class="card-info">
+                                <h3>Architecture</h3>
+                                <p>Structural Design</p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="deck-card">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop"
+                                alt="Documentary">
+                            <div class="card-info">
+                                <h3>Documentary</h3>
+                                <p>Real World Stories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Archive (Dynamic DB Gallery) -->
+        <section class="section archive" id="archive" style="padding: 10vh 0;">
+            <div class="container">
+                <div class="section-header center" style="margin-bottom: 3rem;">
+                    <h2 class="section-title">The Archive</h2>
+                    <p class="section-subtitle">Complete Collection from the Vault</p>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="filter-bar center"
+                    style="margin-bottom: 3rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                    <button class="filter-btn active" data-filter="All">All</button>
+                    <button class="filter-btn" data-filter="Presidential">Presidential</button>
+                    <button class="filter-btn" data-filter="Concerts">Concerts</button>
+                    <button class="filter-btn" data-filter="Documentary">Documentary</button>
+                    <button class="filter-btn" data-filter="Nature">Nature</button>
+                    <button class="filter-btn" data-filter="Architectural">Architectural</button>
+                </div>
+
+                <!-- Dynamic Grid Container -->
+                <div class="gallery-grid" id="dynamic-gallery" style="min-height: 50vh;">
+                    <div class="loader-spinner" style="color:white; text-align:center; grid-column: 1/-1;">Loading
+                        Collection...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Experience & Trust -->
+        <section class="section experience" id="experience">
+            <div class="container">
+                <h2 class="section-title">Renowned Assignments</h2>
+                <div class="experience-grid">
+                    <div class="exp-item glass-pill">
+                        <h3>Presidential Secretariat</h3>
+                        <p>Chief Official Photographer</p>
+                    </div>
+                    <div class="exp-item glass-pill">
+                        <h3>Papal Visit 2015</h3>
+                        <p>Official Coverage (Pope Francis)</p>
+                    </div>
+                    <div class="exp-item glass-pill">
+                        <h3>Sri Lankan Airlines</h3>
+                        <p>Official Photographer</p>
+                    </div>
+                    <div class="exp-item glass-pill">
+                        <h3>Live Concerts</h3>
+                        <p>Yanni, Enrique, Kenny G</p>
+                    </div>
+                </div>
+
+                <h3 class="clients-title">Directed Productions For</h3>
+                <div class="clients-list">
+                    <span>SYDNEY OPERA HOUSE</span>
+                    <span>MEDIA AMBASSADORS</span>
+                    <span>UK STUDIOS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Tools (Horizontal Scroll) -->
+        <section class="section tools" id="tools">
+            <div class="tools-wrapper">
+                <div class="tools-header">
+                    <h2 class="section-title">Tools of the Trade</h2>
+                    <p>World Class Cinema Line Equipment</p>
+                </div>
+                <div class="tools-track">
+                    <!-- High End Gear Items -->
+                    <div class="tool-slide glass-card">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop"
+                            alt="Hasselblad">
+                        <h3>Hasselblad X2D</h3>
+                        <p>100MP Medium Format</p>
+                    </div>
+                    <div class="tool-slide glass-card">
+                        <img src="https://images.unsplash.com/photo-1616423664033-635189283998?q=80&w=1000&auto=format&fit=crop"
+                            alt="Sony Alpha 1">
+                        <h3>Sony Alpha 1</h3>
+                        <p>50MP @ 30FPS</p>
+                    </div>
+                    <div class="tool-slide glass-card">
+                        <img src="https://images.unsplash.com/photo-1587588325964-b5258667a42a?q=80&w=1000&auto=format&fit=crop"
+                            alt="DJI Inspire 3">
+                        <h3>DJI Inspire 3</h3>
+                        <p>8K Cinema Drone</p>
+                    </div>
+                    <div class="tool-slide glass-card">
+                        <img src="https://images.unsplash.com/photo-1549488497-2856d35759ce?q=80&w=1000&auto=format&fit=crop"
+                            alt="Profoto Pro-11">
+                        <h3>Profoto Pro-11</h3>
+                        <p>The World's Fastest Flash</p>
+                    </div>
+                    <div class="tool-slide glass-card">
+                        <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?q=80&w=1000&auto=format&fit=crop"
+                            alt="Leica Summilux">
+                        <h3>Leica Summilux-C</h3>
+                        <p>Cinema Primes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Hire Me -->
+        <section class="section hire-me" id="hire">
+            <div class="container">
+                <h2 class="section-title center">Work With Sagara</h2>
+                <div class="hire-grid">
+                    <form class="hire-form glass-panel">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Your Name or Organization">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="contact@example.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Country</label>
+                                <select>
+                                    <option>Select Country</option>
+                                    <option>Sri Lanka</option>
+                                    <option>USA</option>
+                                    <option>UK</option>
+                                    <option>Australia</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Package</label>
+                                <select>
+                                    <option>Select Package</option>
+                                    <option>Presidential Coverage</option>
+                                    <option>Global Event</option>
+                                    <option>Architectural Shoot</option>
+                                    <option>Documentary</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="Tell me about your vision..."></textarea>
+                        </div>
+                        <button type="submit" class="cta-button full-width">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="container">
+                <div class="footer-content">
+                    <p class="footer-subtitle">Available for Global Assignments & Direction.</p>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com" class="social-icon">IN</a>
+                        <a href="https://instagram.com" class="social-icon">IG</a>
+                        <a href="https://facebook.com" class="social-icon">FB</a>
+                        <a href="https://sagarademel.com" class="social-icon">WEB</a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Sagara Lakmal De Mel. All Rights Reserved. <br>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
